@@ -4,6 +4,6 @@ public class PrincipalDigimon {
 
         System.out.println("\n Es hora de cazar Digimons");
 
-        int edad
+        int edad;
     }
 }
