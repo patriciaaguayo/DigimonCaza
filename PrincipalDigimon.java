@@ -27,11 +27,20 @@ public class PrincipalDigimon {
 
                         case 1:
 
-                            System.out.print("\n Introduce el nombre del Domador: ");
-                            nombreDomador = leer.nextLine();
-                            domador = new Domador(nombreDomador);
-                            cantidad ++;
-                            domador.VerEquipo(domador);
+                            while (true) {
+                                System.out.print("\n Introduce el nombre del Domador: ");
+                                nombreDomador = leer.nextLine();
+
+                                if (nombreDomador.matches("[a-zA-Z]+")) {
+                                    domador = new Domador(nombreDomador);
+                                    domador.VerEquipo(domador);
+                                    break;
+
+                                } else {
+                                    System.out.println("\n El nombre no debe contener numeros");
+                                }
+                            }
+
                             break;
 
                         case 2:
@@ -90,8 +99,12 @@ public class PrincipalDigimon {
 
     private static void gestionJuego(Scanner leer, Domador domador) {
 
+        if (domador == null) {
+            System.out.println("\n Debes crear un domador antes de jugar.");
+            return;
+        }
+
         int opcionJuego = 0;
-        String matricula;
 
         do {
 
@@ -106,6 +119,11 @@ public class PrincipalDigimon {
                     batallaDigital batalla = new batallaDigital(domador);
                     Digimon elegido = batalla.elige(domador);
                     batalla.pelea(elegido, domador);
+
+                    if (domador.getNombreDomador() == null) {
+                        return;
+                    }
+
                     break;
 
                 case 2:
@@ -126,5 +144,3 @@ public class PrincipalDigimon {
     }
 
 }
-
-

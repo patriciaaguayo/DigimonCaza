@@ -47,21 +47,23 @@ public class Digimon {
     // MÉTODOS
 
     public void Ataque1(Digimon enemigo) {
+        int vidaQuitada = this.PuntosAtaque;
         enemigo.Salud -= this.PuntosAtaque;
         this.DP1--;
 
         System.out.println("\n " + this.NombreDigimon + " ha usado Ataque1 contra "
-                + enemigo.NombreDigimon + " y le ha quitado " + this.Salud +
-                " puntos de salud");
+                + enemigo.NombreDigimon + " y le ha quitado " + vidaQuitada +
+                " puntos de salud y se ha quedado con " + enemigo.Salud);
     }
 
     public void Ataque2(Digimon enemigo) {
+        int vidaQuitada= this.PuntosAtaque*2;
         enemigo.Salud -= this.PuntosAtaque*2;
         this.DP2 -= 2;
 
         System.out.println("\n " + this.NombreDigimon + " ha usado Ataque2 contra "
-                + enemigo.NombreDigimon + " y le ha quitado " + this.Salud +
-                " puntos de salud");
+                + enemigo.NombreDigimon + " y le ha quitado " + vidaQuitada +
+                " puntos de salud y se ha quedado con " + enemigo.Salud);
     }
 
     public static Digimon CrearDigimonAleatorio() {

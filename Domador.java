@@ -105,4 +105,9 @@ public class Domador {
         }
         return false;
     }
+
+    public void reset() {
+        this.Equipo.clear();
+        this.NombreDomador = null;
+    }
 }

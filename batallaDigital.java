@@ -6,8 +6,6 @@ public class batallaDigital {
 
     // Atributos
 
-    // Atributos
-
     Digimon Enemigo;
     Domador DomadorEnemigo;
     Domador Domador;
@@ -87,7 +85,7 @@ public class batallaDigital {
 
         if (!domador.tieneDigimonsDisponibles(domador)) {
             System.out.println("\n Todos tus Digimons han sido derrotados. Fin de la partida.");
-            return;
+            domador.reset();
         }
     }
 
