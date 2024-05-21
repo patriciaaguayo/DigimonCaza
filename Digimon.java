@@ -1,5 +1,7 @@
 public class Digimon {
 
+    // Atributos
+
     private String NombreDigimon;
     private int Nivel;
     private int PuntosAtaque;
@@ -49,8 +51,8 @@ public class Digimon {
         this.DP1--;
 
         System.out.println("\n " + this.NombreDigimon + " ha usado Ataque1 contra "
-        + enemigo.NombreDigimon + " y le ha quitado " + this.Salud +
-        " puntos de salud");
+                + enemigo.NombreDigimon + " y le ha quitado " + this.Salud +
+                " puntos de salud");
     }
 
     public void Ataque2(Digimon enemigo) {
@@ -61,5 +63,17 @@ public class Digimon {
                 + enemigo.NombreDigimon + " y le ha quitado " + this.Salud +
                 " puntos de salud");
     }
+
+    public static Digimon CrearDigimonAleatorio() {
+        String[] nombres = {"Agumon", "Gabumon", "Patamon", "Gatomon", "Etemon",
+                "Palmon", "Veemon", "Koromon", "Devimon", "Gomamon"};
+
+        int indice = (int) (Math.random() * nombres.length);
+
+        Digimon Nuevo = new Digimon(nombres[indice]);
+
+        return Nuevo;
+    }
+
 
 }
