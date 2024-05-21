@@ -25,28 +25,26 @@ public class batallaDigital {
     // MÉTODOS
 
     public Digimon elige(Domador domador) {
-
         Scanner leer2 = new Scanner(System.in);
-
         int eleccion = -1;
 
         while (true) {
             try {
                 System.out.println("\n Elige el Digimon de tu equipo:");
                 for (int i = 0; i < domador.getEquipo().size(); i++) {
-                    System.out.println(i + ": " + domador.getEquipo().get(i).getNombreDigimon());
+                    System.out.println((i + 1) + ": " + domador.getEquipo().get(i).getNombreDigimon());
                 }
 
                 eleccion = leer2.nextInt();
 
-                if (eleccion >= 0 && eleccion < domador.getEquipo().size()) {
-                    return domador.getEquipo().get(eleccion);
+                if (eleccion >= 1 && eleccion <= domador.getEquipo().size()) {
+                    return domador.getEquipo().get(eleccion - 1);
                 } else {
-                    System.out.println("\n Eleccion invalida. Elige un numero valido.");
+                    System.out.println("\n Eleccion incorrecta. Elige un numero valido.");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("\n Debes introducir numeros no letras.");
-                leer2.next();
+                System.out.println("\n Debes introducir numeros, no letras.");
+                leer2.next(); // Limpiar el scanner de la entrada inválida
             }
         }
     }
