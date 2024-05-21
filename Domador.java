@@ -3,7 +3,7 @@ public class Domador {
     // Atributos
 
     private int Contador = 0;
-    private Digimon[] Equipo = new Digimon[3];
+     Digimon[] Equipo = new Digimon[3];
     private String NombreDomador;
 
     // Constructor
@@ -23,6 +23,7 @@ public class Domador {
     public String getNombreDomador() {
         return NombreDomador;
     }
+
 
     // MÉTODOS
 
@@ -47,6 +48,6 @@ public class Domador {
             miEquipo += "\n " + equipo[i].getNombreDigimon();
 
         }
-        System.out.println(miEquipo);
+        System.out.println("\n Tu equipo consta de: " + miEquipo);
     }
 }

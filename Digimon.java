@@ -21,10 +21,6 @@ public class Digimon {
 
     // SETTERS Y GETTERS
 
-    public void setNombreDigimon(String nombreDigimon) {
-        NombreDigimon = nombreDigimon;
-    }
-
     public String getNombreDigimon() {
         return NombreDigimon;
     }
@@ -33,9 +29,6 @@ public class Digimon {
         return Nivel;
     }
 
-    public int getPuntosAtaque() {
-        return PuntosAtaque;
-    }
 
     public int getSalud() {
         return Salud;
