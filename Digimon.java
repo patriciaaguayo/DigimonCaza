@@ -66,16 +66,4 @@ public class Digimon {
                 " puntos de salud y se ha quedado con " + enemigo.Salud);
     }
 
-    public static Digimon CrearDigimonAleatorio() {
-        String[] nombres = {"Agumon", "Gabumon", "Patamon", "Gatomon", "Etemon",
-                "Palmon", "Veemon", "Koromon", "Devimon", "Gomamon"};
-
-        int indice = (int) (Math.random() * nombres.length);
-
-        Digimon Nuevo = new Digimon(nombres[indice]);
-
-        return Nuevo;
-    }
-
-
 }

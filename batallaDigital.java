@@ -16,7 +16,7 @@ public class batallaDigital {
 
         this.Domador = domador;
         this.DomadorEnemigo = new Domador("Braulio");
-        this.Enemigo = Digimon.CrearDigimonAleatorio();
+        this.Enemigo = DomadorEnemigo.CrearDigimonAleatorio();
 
     }
 
