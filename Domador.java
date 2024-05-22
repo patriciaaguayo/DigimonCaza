@@ -53,7 +53,9 @@ public class Domador {
                 domador.EquipoObjetivo(domador);
             }
         } else {
-            System.out.println("\n " + digimon.getNombreDigimon() + " no se puede unir. Su salud sigue siendo muy alta.");
+            System.out.println("\n " + digimon.getNombreDigimon() + " no se puede unir. " +
+                    "Su salud sigue siendo muy alta. Debido a tu impaciencia " +
+                    digimon.getNombreDigimon() + " ha huido");
         }
     }
 
