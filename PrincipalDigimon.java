@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/**
+ * @author Patricia Aguayo Escudero
+ */
+
 public class PrincipalDigimon {
 
     public static void main(String[] args) {
@@ -94,7 +98,7 @@ public class PrincipalDigimon {
     /**
      *
      * @param leer Scanner para cadenas
-     *
+     * @param domador Onjeto de la clase Domador
      */
 
     private static void gestionJuego(Scanner leer, Domador domador) {

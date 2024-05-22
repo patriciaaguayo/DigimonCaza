@@ -46,6 +46,11 @@ public class Digimon {
 
     // MÉTODOS
 
+    /**
+     *
+     * @param enemigo objeto de la clase Digimon al que se le realiza el ataque
+     */
+
     public void Ataque1(Digimon enemigo) {
         int vidaQuitada = this.PuntosAtaque;
         enemigo.Salud -= this.PuntosAtaque;
@@ -55,6 +60,11 @@ public class Digimon {
                 + enemigo.NombreDigimon + " y le ha quitado " + vidaQuitada +
                 " puntos de salud y se ha quedado con " + enemigo.Salud);
     }
+
+    /**
+     *
+     * @param enemigo objeto de la clase Digimon al que se le realiza el ataque
+     */
 
     public void Ataque2(Digimon enemigo) {
         int vidaQuitada= this.PuntosAtaque*2;

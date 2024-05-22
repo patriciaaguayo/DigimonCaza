@@ -22,6 +22,13 @@ public class batallaDigital {
 
     // MÉTODOS
 
+    /**
+     *
+     * @param domador objeto de la clase Domador, que hace un listado de su equipo
+     * @return devuelve un objeto de la clase Digimon, es decir devuelve
+     * el Digimon que el usuario elige
+     */
+
     public Digimon elige(Domador domador) {
         Scanner leer2 = new Scanner(System.in);
         int eleccion = -1;
@@ -46,6 +53,12 @@ public class batallaDigital {
             }
         }
     }
+
+    /**
+     *
+     * @param elegido objeto de la clase Digimon para llevar a cabo la pelea
+     * @param domador objeto de la clase Domador para llevar a cabo la pelea
+     */
 
     public void pelea(Digimon elegido, Domador domador) {
 

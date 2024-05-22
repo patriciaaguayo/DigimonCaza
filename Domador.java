@@ -35,6 +35,14 @@ public class Domador {
 
     // MÉTODOS
 
+    /**
+     *
+     * @param digimon objeto de la clase Digimon
+     * @param domador objeto de la clase Domador
+     * Con este método se comprueba si el domanor tiene espacio y si no, se revisa
+     * el equipo que tiene para comprobar si ha logrado el objetivo
+     */
+
     public void captura(Digimon digimon, Domador domador) {
         if (digimon.getSalud() <= digimon.getNivel() * 10 - 20) {
             if (Equipo.size() < 3) {
@@ -49,6 +57,11 @@ public class Domador {
         }
     }
 
+    /**
+     *
+     * @return devuelve el nombre del digimon aleatorio
+     */
+
     public Digimon CrearDigimonAleatorio() {
         String[] nombres = {"Agumon", "Gabumon", "Patamon", "Gatomon", "Etemon",
                 "Palmon", "Veemon", "Koromon", "Devimon", "Gomamon"};
@@ -59,6 +72,11 @@ public class Domador {
 
         return Nuevo;
     }
+
+    /**
+     *
+     * @param domador objeto de tipo Domador que muestra el equipo que tiene
+     */
 
     public void VerEquipo(Domador domador){
 
@@ -71,6 +89,11 @@ public class Domador {
         }
         System.out.println("\n Tu equipo consta de: " + miEquipo);
     }
+
+    /**
+     *
+     * @param domador objeto de tipo Domador comprueba si ha llegado al equipo objetivo
+     */
 
     public void EquipoObjetivo(Domador domador) {
 
@@ -96,6 +119,12 @@ public class Domador {
             System.out.println("\n Lastima, no has logrado conseguir en tu equipo a Agumon, Gabumon y Patamon.");
         }
     }
+
+    /**
+     *
+     * @param domador objeto de la clase Domador
+     * @return Retorna si tiene Digimons disponibles en su equipo
+     */
 
     public boolean tieneDigimonsDisponibles(Domador domador) {
         for (Digimon digimon : domador.getEquipo()) {
