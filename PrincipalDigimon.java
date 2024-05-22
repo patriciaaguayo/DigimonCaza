@@ -79,7 +79,7 @@ public class PrincipalDigimon {
      * Menus visibles para el usuario
      */
 
-    private static void MenuPrincipal() {
+    public static void MenuPrincipal() {
 
         System.out.println("\n -- Menu Principal: --");
         System.out.println("\n 1. Crear Jugador");
@@ -87,7 +87,7 @@ public class PrincipalDigimon {
         System.out.println(" 3. Salir");
     }
 
-    private static void MenuJuegos() {
+    public static void MenuJuegos() {
 
         System.out.println("\n -- Menu del Juego: --");
         System.out.println("\n 1. Iniciar batalla");
@@ -101,7 +101,7 @@ public class PrincipalDigimon {
      * @param domador Onjeto de la clase Domador
      */
 
-    private static void gestionJuego(Scanner leer, Domador domador) {
+    public static void gestionJuego(Scanner leer, Domador domador) {
 
         if (domador == null) {
             System.out.println("\n Debes crear un domador antes de jugar.");
